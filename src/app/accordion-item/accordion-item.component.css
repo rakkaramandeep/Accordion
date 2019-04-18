@@ -1,0 +1,32 @@
+.accordion-section { 
+  background-color: rgba(0,0,0,.03);
+  
+}
+.accordion-section:nth-child(3){
+  border-bottom: 0px;
+}
+.accordion-sectionheader {
+  cursor: pointer;
+  color: #007bff;
+  padding: 20px;
+   border-bottom: 1px solid rgba(0,0,0,.125); 
+}
+.accordion-sectioncontent {
+  height: auto;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+.accordion-item--isOpen .accordion-sectioncontent {
+	padding: 20px;
+ border-bottom: 1px solid rgba(0,0,0,.125); 
+}
+
+::ng-deep app-accordion-section:nth-last-child(1) .accordion-item--isClose .accordion-sectionheader{
+border-bottom:none !important;
+}
+::ng-deep app-accordion-section:nth-last-child(1) .accordion-item--isOpen .accordion-sectioncontent{
+  border-bottom:none !important;
+}
+.accordion-sectionheader:hover{
+  text-decoration: underline;
+}

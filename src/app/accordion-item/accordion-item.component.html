@@ -1,0 +1,11 @@
+<div class="accordion-section" [ngClass]="{
+  'accordion-item--isOpen': hideVal == 'isShow',
+  'accordion-item--isClose': hideVal == 'isHide'
+}">
+  <div class="accordion-sectionheader" (click)="accordiontoggle()">
+    <ng-content select=".accordion-toggle-header"></ng-content>
+  </div>
+  <div class="accordion-sectioncontent" [@accordionItemContentAnimation]="hideVal"  >
+    <ng-content select=".accordion-toggle-content"></ng-content>
+  </div>  
+</div> 

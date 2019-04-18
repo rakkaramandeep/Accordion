@@ -1,0 +1,14 @@
+
+
+<app-accordion> <!-- Accordian Component  -->
+
+  <app-accordion-section [item]="accordionItem" *ngFor="let accordionItem of accordionItems"> 
+  	<!-- accordian Section Component -->
+    <div class="accordion-toggle-header">
+      {{ accordionItem.name }} 
+    </div>
+    <div class="accordion-toggle-content">
+      {{ accordionItem.data }}
+    </div>
+  </app-accordion-section> 
+</app-accordion>
